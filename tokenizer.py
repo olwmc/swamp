@@ -81,10 +81,10 @@ def tokenize(program):
     inDescriptor = False
 
     for string in program:
-        # Check for () descriptor or comment
-        if string == "(":
+        # Check for (descriptor or comment) 
+        if string[0] == "(":
             inDescriptor = True
-        elif string == ")":
+        elif string[-1] == ")":
             inDescriptor = False
             continue
         
