@@ -129,7 +129,7 @@ class Do_Loop(Word):
     end = x_y[0]
 
     # While i < end value
-    while(start < end):
+    while(start <= end):
 
       # Set the value for i in constants
       env["CONSTANTS"]["i"] = start
@@ -152,12 +152,12 @@ class String_Print(Word):
       print(self.content, end="")
 
 ###############################
+
 def make_env():
   return {
       "FUNCTIONS" : {},
       "VARIABLES" : {
-        "vars": [0] * 576,
-        "graphics" : 0,
+        "vars": []
       },
       
       "CONSTANTS" : {}

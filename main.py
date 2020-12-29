@@ -18,27 +18,24 @@ do-fizz-buzz
 """
 
 var_test = """
-( Testing simple variable )
+( Testing simple variable. Should print 576 )
 variable beans
 123 beans !
 beans @ . cr
 
 ( Testing additional variable to see if 
-  it can do memory correctly )
+  it can do memory correctly. Should print 777 )
 variable court
-567 court !
+777 court !
 court @ . cr
 
- 
-: foo 0 10 0 do i + loop ;
-foo
-?
-"""
+( Function test. Should print 45 [0+1+2+3+4+5+6+7+8+9+10] )
+: foo 0 10 1 do i + loop ;
+foo . cr
 
-const_test = """
-( Testing constants )
-34 constant beans
-beans .
+( Testing constants. Should print 34 )
+34 constant test_const
+test_const . cr
 """
 
 stack = []
