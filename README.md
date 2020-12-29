@@ -9,3 +9,4 @@ A Forthy type language heavily inspired by the wonderful [EasyForth](https://ski
 - [ ] Imports
 - [X] Method descriptors / Comments *(n -- n)*
 - [ ] User input
+- [ ] Unit testing
