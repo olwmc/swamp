@@ -6,7 +6,6 @@ A Forthy type language heavily inspired by the wonderful [EasyForth](https://ski
 - [ ] Conditionals
     - [X] If
     - [ ] Else
-- [ ] Imports
+- [X] Imports
 - [X] Method descriptors / Comments *(n -- n)*
 - [ ] User input
-- [ ] Unit testing
