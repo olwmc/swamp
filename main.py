@@ -13,7 +13,3 @@ variable beans
 """
 run_program(program, stack, env)
 print(env)
-
-"""
-To get allot, all you need to do is just add to the specified number of memory
-"""
