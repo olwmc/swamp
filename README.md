@@ -3,7 +3,7 @@ A Forthy type language heavily inspired by the wonderful [EasyForth](https://ski
 
 
 ## TODO:
-[] Conditionals
-[] Imports
-[] Comments
-[] User input
+- [ ] Conditionals
+- [ ] Imports
+- [ ] Comments
+- [ ] User input
