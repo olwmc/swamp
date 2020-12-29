@@ -153,6 +153,39 @@ class String_Print(Word):
 
 ###############################
 
+class Import_Statement(Word):
+  def __init__(self, file_name):
+    super().__init__()
+    self.file_name = file_name
+  
+  def execute(self, stack, env):
+    # Read in the file and execute it on the
+    # same stack and environment
+    pass
+
+###############################
+
+class Conditional_Statement(Word):
+
+  def __init__(self, if_body, else_body=None):
+    super().__init__()
+    self._if = if_body
+    self._else = else_body
+
+  def execute(self, stack, env):
+    # If the top of the stack isn't false
+    # run the if block
+    if POP(stack) != 0:
+      for word in self._if:
+        word.execute(stack, env)
+
+    # Else run the else block
+    elif self._else != None:
+      for word in self._else:
+        execute(word, stack, env)
+
+###############################
+
 def make_env():
   return {
       "FUNCTIONS" : {},

@@ -39,7 +39,7 @@ test_const . cr
 stack = []
 env = make_env()
 
-run_program(var_test, stack, env)
+run_program(fizzbuzz, stack, env)
 
 """
 To get allot, all you need to do is just add to the specified number of memory

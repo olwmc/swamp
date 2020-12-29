@@ -34,7 +34,13 @@ def make_words(tokens):
     # Identifier
     elif token.token_type == "IDENTIFIER":
       words.append(Identifier(token.value))
-      
+    
+    elif token.token_type == "IF":
+      raw_body = make_body(tokens, "THEN")
+      parsed_body = make_words(raw_body)
+
+      words.append(Conditional_Statement(parsed_body))
+
     # Multi-word do loop
     elif token.token_type == "DO":
       raw_body = make_body(tokens, "LOOP")
