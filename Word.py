@@ -1,9 +1,4 @@
 from ops import *
-"""
-class ConditionalStatement(Word:
-	_if: List[Word]
-	_else: List[Word]
-"""
 
 ###############################
 class Word(object):
@@ -153,18 +148,6 @@ class String_Print(Word):
 
 ###############################
 
-class Import_Statement(Word):
-  def __init__(self, file_name):
-    super().__init__()
-    self.file_name = file_name
-  
-  def execute(self, stack, env):
-    # Read in the file and execute it on the
-    # same stack and environment
-    pass
-
-###############################
-
 class Conditional_Statement(Word):
 
   def __init__(self, if_body, else_body=None):
@@ -195,3 +178,5 @@ def make_env():
       
       "CONSTANTS" : {}
   }
+
+###############################

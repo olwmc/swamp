@@ -1,6 +1,16 @@
 from Word import *
 from tokenizer import *
 
+# Import_statement class is here to avoid circular imports
+class Import_Statement(Word):
+  def __init__(self, file_name):
+    super().__init__()
+    self.file_name = file_name + ".fs"
+
+  def execute(self, stack, env):
+    run_program_from_file(self.file_name, stack, env)
+
+# Make words from tokens
 def make_words(tokens):
   words = []
   
@@ -30,6 +40,10 @@ def make_words(tokens):
     # Store memory token
     elif token.token_type == "STORE_MEMORY":
       words.append(Store_Memory())
+
+    # Store memory token
+    elif token.token_type == "IMPORT":
+      words.append(Import_Statement(tokens.pop(0).value))
 
     # Identifier
     elif token.token_type == "IDENTIFIER":
@@ -125,3 +139,17 @@ def make_body(words, end):
     body.append(current_word)
   
   return body
+
+# 
+def run_program(program, stack, env):
+  tokens = tokenize(program)
+  words = make_words(tokens)
+
+  for word in words:
+      word.execute(stack, env)
+
+def run_program_from_file(file_name, stack, env):
+  with open(file_name) as open_file:
+    program = "\n".join(open_file.readlines())
+
+  run_program(program, stack, env)

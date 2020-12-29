@@ -47,6 +47,9 @@ def get_token_type(string):
             # String output
             ".\""       : "QUOTE",
             
+            # Import statement
+            "import"    : "IMPORT",
+            
             # Exit
             "exit"      : "EXIT"
     }
