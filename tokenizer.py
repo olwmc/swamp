@@ -4,6 +4,8 @@ class Token(object):
         self.token_type = token_type
         self.value = value
     
+    def __eq__(self, other):
+        return self.token_type == other.token_type and self.value == other.value
     def __str__(self):
         """String representation of the token"""
         return str(self.token_type) + "  |  " + str(self.value)

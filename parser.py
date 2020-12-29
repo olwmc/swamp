@@ -50,6 +50,7 @@ def make_words(tokens):
       words.append(Identifier(token.value))
     
     elif token.token_type == "IF":
+      # DO "if Token("ELSE", "else") in raw_body: do xyz"
       raw_body = make_body(tokens, "THEN")
       parsed_body = make_words(raw_body)
 
