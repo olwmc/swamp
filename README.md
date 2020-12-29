@@ -4,6 +4,8 @@ A Forthy type language heavily inspired by the wonderful [EasyForth](https://ski
 
 ## TODO:
 - [ ] Conditionals
+    - [X] If
+    - [ ] Else
 - [ ] Imports
 - [X] Method descriptors / Comments *(n -- n)*
 - [ ] User input
