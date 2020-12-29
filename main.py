@@ -1,5 +1,4 @@
 from lexer import *
-import json
 
 def run_program(program, stack, env):
   tokens = tokenize(program)
@@ -7,7 +6,6 @@ def run_program(program, stack, env):
 
   for word in words:
       word.execute(stack, env)
-      # Check graphics and change accordingly
 
 fizzbuzz = """
 : fizz?  3 mod 0 = dup if ." Fizz" then ;
