@@ -36,8 +36,8 @@ def get_token_type(string):
             "begin"     : "BEGIN",              "until"     : "UNTIL",
 
             # Variables and memory
-            "variable"  : "VAR_DECLARATION",    "constant"     : "CONST_DECLARATION",
-            "cells"     : "CELLS",              "allot"     : "ALLOT",
+            "variable"  : "VAR_DECLARATION",    "constant"  : "CONST_DECLARATION",
+            "cells"     : "CELLS",              "alloc"     : "ALLOC",
             "!"         : "STORE_MEMORY",       "@"         : "FETCH_MEMORY",
 
             # Function declaration

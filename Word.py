@@ -77,6 +77,15 @@ class Fetch_Memory(Word):
     PUSH(value, stack)
 
 ###############################
+
+class Allocate_Memory(Word):
+    def __init__(self):
+      super().__init__()
+    
+    def execute(self, stack, env):
+      env["VARIABLES"]["vars"] += [0] * (POP(stack) - 1)
+
+###############################
 class Function_Declaration(Word):
     def __init__(self, name, body):
       super().__init__()

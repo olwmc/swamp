@@ -33,6 +33,10 @@ def make_words(tokens):
     elif token.token_type == "CONST_DECLARATION":
       words.append(Const_Declaration(tokens.pop(0).value))
 
+    # Allocate memoryu
+    elif token.token_type == "ALLOC":
+      words.append(Allocate_Memory())
+      
     # Fetch memory token
     elif token.token_type == "FETCH_MEMORY":
       words.append(Fetch_Memory())
