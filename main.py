@@ -2,14 +2,5 @@ from parser import *
 stack = []
 env = make_env()
 
-program = """
-variable beans 
-10 alloc
-
-10 0 do
-        i
-        i beans + !
-    loop
-"""
-run_program(program, stack, env)
+run_program_from_file("progs/memory.fs", stack, env)
 print(env)

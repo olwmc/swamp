@@ -36,7 +36,7 @@ def make_words(tokens):
     # Allocate memoryu
     elif token.token_type == "ALLOC":
       words.append(Allocate_Memory())
-      
+
     # Fetch memory token
     elif token.token_type == "FETCH_MEMORY":
       words.append(Fetch_Memory())
@@ -74,7 +74,7 @@ def make_words(tokens):
 
       # While not xyzabc"
       while tokens[0].value[-1] != "\"":
-        string += tokens[0].value + " "
+        string += tokens[0].value + ""
         tokens.pop(0)
 
       # Get last word w/o \"

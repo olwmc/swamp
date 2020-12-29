@@ -145,6 +145,7 @@ class Do_Loop(Word):
       # Increment i
       start += 1
 
+    env["CONSTANTS"].pop("i")
 ###############################
 
 class String_Print(Word):
