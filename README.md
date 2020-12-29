@@ -7,5 +7,6 @@ A Forthy type language heavily inspired by the wonderful [EasyForth](https://ski
     - [X] If
     - [ ] Else
 - [X] Imports
+- [X] Memory allocation
 - [X] Method descriptors / Comments *(n -- n)*
 - [ ] User input
