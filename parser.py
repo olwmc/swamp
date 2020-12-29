@@ -97,18 +97,6 @@ def make_words(tokens):
       # Add the new declaration
       words.append(Function_Declaration(name, parsed_body))
 
-    # elif token.token_type == "IF":
-#   raw_body = make_body(tokens, "THEN")
-# """
-# GET THE INDEX OF "ELSE" AND JUST DO TWO STRING SLICES
-# """
-#   if_body = XYZ
-#   parsed_if_body = make_words(parsed_if_body, defs)
-#
-#   else_body = ABC
-#   parsed_if_body = make_words(parsed_if_body, defs)
-#   words.append(Conditional("CONDITIONAL", parsed_if_body))
-
   return words
 
 def get_op_function(value):
@@ -140,7 +128,7 @@ def make_body(words, end):
   
   return body
 
-# 
+# Run the program from string
 def run_program(program, stack, env):
   tokens = tokenize(program)
   words = make_words(tokens)
@@ -148,6 +136,7 @@ def run_program(program, stack, env):
   for word in words:
       word.execute(stack, env)
 
+# Run the program from file
 def run_program_from_file(file_name, stack, env):
   with open(file_name) as open_file:
     program = "\n".join(open_file.readlines())
