@@ -12,3 +12,4 @@ A Forthy type language heavily inspired by the wonderful [EasyForth](https://ski
 - [X] Method descriptors / Comments *(n -- n)*
 - [ ] Unimplemented operations
 - [ ] User input
+- [ ] Error checking
