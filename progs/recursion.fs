@@ -6,5 +6,3 @@
         dup 1 - foo
     then
 ;
-
-10 foo ?

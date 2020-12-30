@@ -57,6 +57,48 @@ def make_words(tokens):
     elif token.token_type == "IDENTIFIER":
       words.append(Identifier(token.value))
     
+    # Multi-word do loop
+    elif token.token_type == "DO":
+      raw_body = make_body(tokens, "LOOP")
+      parsed_body = make_words(raw_body)
+
+      words.append(Do_Loop(parsed_body))
+
+    # Function declaration
+    elif token.token_type == "DEF_START":
+      # Raw body of tokens from : to ;
+      raw_body = make_body(tokens, "DEF_END")
+
+      # Parsed body of tokens into Words
+      parsed_body = make_words(raw_body)
+
+      # Name of the function is the first token
+      name = parsed_body.pop(0).name
+
+      # Add the new declaration
+      words.append(Function_Declaration(name, parsed_body))
+
+    # String print
+    elif token.token_type == "QUOTE":
+      # Temp string
+      string = ""
+
+      # While not xyzabc"
+      while tokens[0].value[-1] != "\"":
+        string += tokens[0].value + " "
+        tokens.pop(0)
+
+      # Get last word w/o \"
+      last = tokens.pop(0).value[:-1]
+
+      # TODO: FIX THIS
+      if len(last) == 0:
+        string += " "
+      else:
+        string += last 
+
+      words.append(String_Print(string))
+
     elif token.token_type == "IF":
       # DO "if Token("ELSE", "else") in raw_body: do xyz"
       raw_body = make_body(tokens, "THEN")
@@ -86,48 +128,6 @@ def make_words(tokens):
 
       # Append the conditional
       words.append(Conditional_Statement(parsed_if_body, parsed_else_body))
-
-    # Multi-word do loop
-    elif token.token_type == "DO":
-      raw_body = make_body(tokens, "LOOP")
-      parsed_body = make_words(raw_body)
-
-      words.append(Do_Loop(parsed_body))
-
-    # String print
-    elif token.token_type == "QUOTE":
-      # Temp string
-      string = ""
-
-      # While not xyzabc"
-      while tokens[0].value[-1] != "\"":
-        string += tokens[0].value + " "
-        tokens.pop(0)
-
-      # Get last word w/o \"
-      last = tokens.pop(0).value[:-1]
-
-      # TODO: FIX THIS
-      if len(last) == 0:
-        string += " "
-      else:
-        string += last 
-
-      words.append(String_Print(string))
-
-    # Function declaration
-    elif token.token_type == "DEF_START":
-      # Raw body of tokens from : to ;
-      raw_body = make_body(tokens, "DEF_END")
-
-      # Parsed body of tokens into Words
-      parsed_body = make_words(raw_body)
-
-      # Name of the function is the first token
-      name = parsed_body.pop(0).name
-
-      # Add the new declaration
-      words.append(Function_Declaration(name, parsed_body))
 
   return words
 

@@ -1,8 +1,5 @@
 ( Factorial function )
 : fact
-    ( Add one to input )
-    1 +
-    
     ( Push 1 and swap with input to act
       as loop upper bound)
     1 swap 1
@@ -13,5 +10,7 @@
     loop
 ;
 
-." Enter a number: " input
-fact . cr
+5 1
+do
+  i fact . cr
+loop
