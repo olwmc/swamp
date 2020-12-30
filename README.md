@@ -13,7 +13,7 @@ A FORTH-type language.
 - [ ] User input
 - [ ] Error checking
 
-### Resources/Inspiration
+### Resources/References
 The *wonderful* [EasyForth](https://skilldrick.github.io/easyforth/) by Skilldrick
 
 [Starting Forth](https://www.forth.com/starting-forth/)
