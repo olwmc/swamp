@@ -1,8 +1,6 @@
 # Swamp
 A FORTH-type language.
 
-Heavily inspired by the wonderful [EasyForth](https://skilldrick.github.io/easyforth/) by Skilldrick
-
 ## TODO:
 - [X] Conditionals
     - [X] If
@@ -14,6 +12,11 @@ Heavily inspired by the wonderful [EasyForth](https://skilldrick.github.io/easyf
 - [ ] Unimplemented operations
 - [ ] User input
 - [ ] Error checking
+
+### Resources/Inspiration
+The *wonderful* [EasyForth](https://skilldrick.github.io/easyforth/) by Skilldrick
+
+[Starting Forth](https://www.forth.com/starting-forth/)
 
 <!-- ## Other goals:
 - [ ] Virtual machine
