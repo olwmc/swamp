@@ -25,6 +25,9 @@ def make_words(tokens):
     elif token.token_type == "OP":
       words.append(Operation(get_op_function(token.value)))
 
+    elif token.token_type == "INPUT":
+      words.append(Input())
+      
     # Variable declration
     elif token.token_type == "VAR_DECLARATION":
       words.append(Variable_Declaration(tokens.pop(0).value))
@@ -33,7 +36,7 @@ def make_words(tokens):
     elif token.token_type == "CONST_DECLARATION":
       words.append(Const_Declaration(tokens.pop(0).value))
 
-    # Allocate memoryu
+    # Allocate memory
     elif token.token_type == "ALLOC":
       words.append(Allocate_Memory())
 

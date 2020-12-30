@@ -43,8 +43,8 @@ def get_token_type(string):
             # Function declaration
             ":"         : "DEF_START",          ";"         : "DEF_END",
 
-            # Input
-            "key"       : "KEY",
+            # Numeric input
+            "input"       : "INPUT",
             
             # String output
             ".\""       : "QUOTE",

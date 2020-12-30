@@ -12,5 +12,3 @@
         i *
     loop
 ;
-
-8 fact . cr
