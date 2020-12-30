@@ -17,4 +17,4 @@ Heavily inspired by the wonderful [EasyForth](https://skilldrick.github.io/easyf
 
 ## Other goals:
 - [ ] Virtual machine
-- [ ] Compiler
+- [ ] VM compiler
