@@ -1,4 +1,4 @@
-# Squeaky
+# Swamp
 A FORTH-type language.
 
 Heavily inspired by the wonderful [EasyForth](https://skilldrick.github.io/easyforth/) by Skilldrick
