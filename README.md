@@ -13,3 +13,7 @@ A Forthy type language heavily inspired by the wonderful [EasyForth](https://ski
 - [ ] Unimplemented operations
 - [ ] User input
 - [ ] Error checking
+
+## Other goals:
+- [ ] Virtual machine
+- [ ] Compiler
