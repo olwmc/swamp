@@ -160,7 +160,7 @@ class String_Print(Word):
 
 class Conditional_Statement(Word):
 
-  def __init__(self, if_body, else_body=None):
+  def __init__(self, if_body, else_body):
     super().__init__()
     self._if = if_body
     self._else = else_body
@@ -175,7 +175,7 @@ class Conditional_Statement(Word):
     # Else run the else block
     elif self._else != None:
       for word in self._else:
-        execute(word, stack, env)
+        word.execute(stack, env)
 
 ###############################
 

@@ -56,9 +56,32 @@ def make_words(tokens):
     elif token.token_type == "IF":
       # DO "if Token("ELSE", "else") in raw_body: do xyz"
       raw_body = make_body(tokens, "THEN")
-      parsed_body = make_words(raw_body)
 
-      words.append(Conditional_Statement(parsed_body))
+      # Set if_body to raw body
+      if_body = raw_body
+      else_body = None
+
+      # First check if the conditional is if/else or just if
+      if Token("ELSE", "else") in raw_body:
+        # Get the index of "else"
+        else_index = raw_body.index(Token("ELSE", "else"))
+
+        # Set the if_body to everything before "else"
+        if_body = raw_body[:else_index]
+
+        # Set the else_body to everything after "else"
+        else_body = raw_body[else_index+1:]
+
+      # Parse if body
+      parsed_if_body = make_words(if_body) 
+      parsed_else_body = None
+
+      # If not none, parse else_body
+      if else_body != None:
+        parsed_else_body = make_words(else_body)
+
+      # Append the conditional
+      words.append(Conditional_Statement(parsed_if_body, parsed_else_body))
 
     # Multi-word do loop
     elif token.token_type == "DO":
@@ -74,7 +97,7 @@ def make_words(tokens):
 
       # While not xyzabc"
       while tokens[0].value[-1] != "\"":
-        string += tokens[0].value + ""
+        string += tokens[0].value + " "
         tokens.pop(0)
 
       # Get last word w/o \"
@@ -84,7 +107,7 @@ def make_words(tokens):
       if len(last) == 0:
         string += " "
       else:
-        string += last
+        string += last 
 
       words.append(String_Print(string))
 

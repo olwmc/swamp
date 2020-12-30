@@ -3,10 +3,11 @@ A Forthy type language heavily inspired by the wonderful [EasyForth](https://ski
 
 
 ## TODO:
-- [ ] Conditionals
+- [X] Conditionals
     - [X] If
-    - [ ] Else
+    - [X] Else
 - [X] Imports
 - [X] Memory allocation
 - [X] Method descriptors / Comments *(n -- n)*
+- [ ] Unimplemented operations
 - [ ] User input

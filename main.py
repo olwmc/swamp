@@ -2,5 +2,4 @@ from parser import *
 stack = []
 env = make_env()
 
-run_program_from_file("progs/memory.fs", stack, env)
-print(env)
+run_program_from_file("progs/if-else.fs", stack, env)
