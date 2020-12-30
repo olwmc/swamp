@@ -12,3 +12,6 @@
         i *
     loop
 ;
+
+." Enter a number: " input
+fact . cr

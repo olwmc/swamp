@@ -134,7 +134,7 @@ class Do_Loop(Word):
     end = x_y[0]
 
     # While i < end value
-    while(start < end):
+    while(start <= end):
 
       # Set the value for i in constants
       env["CONSTANTS"]["i"] = start
