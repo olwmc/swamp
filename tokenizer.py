@@ -82,17 +82,17 @@ def tokenize(program):
     clean(program)
 
     tokens = []
-    inDescriptor = False
+    inComment = False
 
     for string in program:
         # Check for (descriptor or comment) 
         if string[0] == "(":
-            inDescriptor = True
+            inComment = True
         elif string[-1] == ")":
-            inDescriptor = False
+            inComment = False
             continue
         
         # Otherwhise just make the token
-        if not inDescriptor:
+        if not inComment:
             tokens.append(Token(get_token_type(string), string))  
     return tokens

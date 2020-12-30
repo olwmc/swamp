@@ -7,10 +7,11 @@ A FORTH-type language.
     - [X] Else
 - [X] Imports
 - [X] Memory allocation
-- [ ] begin-until loop
-- [X] Method descriptors / Comments *(n -- n)*
-- [ ] Unimplemented operations
 - [X] User input
+- [X] Method descriptors / Comments *(n -- n)*
+- [ ] begin-until loop
+- [ ] Unimplemented operations
+- [ ] Debug mode
 - [ ] Error checking
 
 ### Resources/References
