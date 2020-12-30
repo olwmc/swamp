@@ -15,6 +15,6 @@ Heavily inspired by the wonderful [EasyForth](https://skilldrick.github.io/easyf
 - [ ] User input
 - [ ] Error checking
 
-## Other goals:
+<!-- ## Other goals:
 - [ ] Virtual machine
-- [ ] VM compiler
+- [ ] VM compiler -->
