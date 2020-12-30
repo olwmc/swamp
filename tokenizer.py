@@ -78,7 +78,6 @@ def clean(arr):
              
 def tokenize(program):
     """Splits the input program into a series of tokens"""
-    # TODO: CLEAN #COMMENTS
     program = program.split()
     clean(program)
 
