@@ -25,10 +25,11 @@ def make_words(tokens):
     elif token.token_type == "OP":
       words.append(Operation(get_op_function(token.value)))
 
+    # Get input
     elif token.token_type == "INPUT":
       words.append(Input())
       
-    # Variable declration
+    # Variable declaration
     elif token.token_type == "VAR_DECLARATION":
       words.append(Variable_Declaration(tokens.pop(0).value))
 
