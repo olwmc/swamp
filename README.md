@@ -1,6 +1,7 @@
-# Forthy_thing
-A Forthy type language heavily inspired by the wonderful [EasyForth](https://skilldrick.github.io/easyforth/)
+# Squeaky
+A FORTH-type language.
 
+Heavily inspired by the wonderful [EasyForth](https://skilldrick.github.io/easyforth/) by Skilldrick
 
 ## TODO:
 - [X] Conditionals
