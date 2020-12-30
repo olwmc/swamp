@@ -8,6 +8,7 @@ A Forthy type language heavily inspired by the wonderful [EasyForth](https://ski
     - [X] Else
 - [X] Imports
 - [X] Memory allocation
+- [ ] begin-until loop
 - [X] Method descriptors / Comments *(n -- n)*
 - [ ] Unimplemented operations
 - [ ] User input
