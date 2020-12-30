@@ -1,7 +1,7 @@
 # Swamp
 A FORTH-type language.
 
-## TODO:
+### TODO:
 - [X] Conditionals
     - [X] If
     - [X] Else
