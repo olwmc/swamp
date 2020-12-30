@@ -10,7 +10,7 @@ A FORTH-type language.
 - [ ] begin-until loop
 - [X] Method descriptors / Comments *(n -- n)*
 - [ ] Unimplemented operations
-- [ ] User input
+- [X] User input
 - [ ] Error checking
 
 ### Resources/References
