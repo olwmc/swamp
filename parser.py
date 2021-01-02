@@ -148,7 +148,8 @@ def get_op_function(value):
       "="         : EQUALS,                 "."         : PRINT, 
       ">"         : "OP",                   "<"         : "OP",
       "and"       : "OP",                   "or"        : OR,
-      "invert"    : INVERT,                 "mod"       : MOD
+      "invert"    : INVERT,                 "mod"       : MOD,
+      "exit"      : EXIT
   }.get(value)
 
 
@@ -176,7 +177,10 @@ def run_program(program, stack, env):
 
 # Run the program from file
 def run_program_from_file(file_name, stack, env):
-  with open(file_name) as open_file:
-    program = "\n".join(open_file.readlines())
+  try:
+    with open(file_name) as open_file:
+      program = "\n".join(open_file.readlines())
+  except:
+    print("Error: \"" + file_name + "\" not found")
 
   run_program(program, stack, env)

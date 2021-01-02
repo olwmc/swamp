@@ -53,7 +53,7 @@ def get_token_type(string):
             "import"    : "IMPORT",
             
             # Exit
-            "exit"      : "EXIT"
+            "exit"      : "OP"
     }
 
     # Get the token type from the dictionary

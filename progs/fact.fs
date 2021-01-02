@@ -10,5 +10,6 @@
     loop
 ;
 
+." Factorial computer" cr
 ." Input a number:" input
 fact . cr
