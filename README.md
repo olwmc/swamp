@@ -11,6 +11,12 @@ A FORTH-type language.
         dup 1 - foo
     then
 ;
+
+10 foo ?
+```
+Output:
+```
+[10,9,8,7,6,5,4,3,2,1]
 ```
 
 ### TODO:
