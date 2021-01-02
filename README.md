@@ -5,14 +5,17 @@ A FORTH-type language.
 ```fsharp
 ( Recursively push values down from n)
 : foo
-    ( Check if != )
-    dup 0 = invert
+    ( Check if != 1 )
+    dup 1 = invert
     if
         dup 1 - foo
     then
 ;
 
-10 foo ?
+10 foo
+
+( Print stack)
+?
 ```
 Output:
 ```
