@@ -1,6 +1,18 @@
 # Swamp
 A FORTH-type language.
 
+## Example:
+```fsharp
+( Recursively push values down from n)
+: foo
+    ( Check if != )
+    dup 0 = invert
+    if
+        dup 1 - foo
+    then
+;
+```
+
 ### TODO:
 - [X] Conditionals
     - [X] If
