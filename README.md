@@ -2,7 +2,7 @@
 A FORTH-type language.
 
 ## Example:
-```fsharp
+```forth
 ( Recursively push values down from n)
 : foo
     ( Check if != 1 )
@@ -18,7 +18,7 @@ A FORTH-type language.
 ?
 ```
 Output:
-```
+```python
 [10,9,8,7,6,5,4,3,2,1]
 ```
 
