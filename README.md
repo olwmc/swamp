@@ -30,7 +30,8 @@ Output:
 - [X] Memory allocation
 - [X] User input
 - [X] Method descriptors / Comments *(n -- n)*
-- [ ] begin-until loop
+- [X] begin-until loop
+- [ ] RNG
 - [ ] Unimplemented operations
 - [ ] Debug mode
 - [ ] Error checking

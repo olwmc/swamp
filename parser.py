@@ -57,6 +57,13 @@ def make_words(tokens):
     elif token.token_type == "IDENTIFIER":
       words.append(Identifier(token.value))
     
+    # Begin until loop
+    elif token.token_type == "BEGIN":
+      raw_body = make_body(tokens, "UNTIL")
+      parsed_body = make_words(raw_body)
+      
+      words.append(Begin_Until_Loop(parsed_body))
+
     # Multi-word do loop
     elif token.token_type == "DO":
       raw_body = make_body(tokens, "LOOP")

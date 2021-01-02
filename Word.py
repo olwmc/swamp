@@ -145,7 +145,23 @@ class Do_Loop(Word):
       
       # Increment i
       start += 1
-    
+  
+###############################
+
+class Begin_Until_Loop(Word):
+  def __init__(self, body):
+    super().__init__()
+    self.body = body
+
+  def execute(self, stack, env):
+    # Until the top of the stack is 0, 
+    # keep running the body
+    while(True):
+      for word in self.body:
+        word.execute(stack, env)
+      
+      if stack.pop() != 0:
+        break;
 ###############################
 
 class String_Print(Word):
@@ -163,7 +179,8 @@ class Input(Word):
       super().__init__()
 
     def execute(self, stack, env):
-      PUSH(int(input()), stack)
+      inp = int(input(""))
+      PUSH(inp, stack)
 
 ###############################
 
