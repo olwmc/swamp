@@ -2,7 +2,7 @@
 A FORTH-type language.
 
 ## Example:
-```fsharp
+```forth
 ( Recursively push values down from n)
 : foo
     ( Check if != 1 )
