@@ -10,7 +10,5 @@
     loop
 ;
 
-5 1
-do
-  i fact . cr
-loop
+." Input a number:" input
+fact . cr

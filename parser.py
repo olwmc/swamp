@@ -100,7 +100,6 @@ def make_words(tokens):
       words.append(String_Print(string))
 
     elif token.token_type == "IF":
-      # DO "if Token("ELSE", "else") in raw_body: do xyz"
       raw_body = make_body(tokens, "THEN")
 
       # Set if_body to raw body
