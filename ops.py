@@ -12,6 +12,11 @@ def get_x_y(stack):
 
     return x,y
 
+# INPUT
+def INPUT(stack):
+    inp = int(input(""))
+    PUSH(inp, stack)
+
 # OPERATIONS
 def ADD(stack):
     x_y = get_x_y(stack)
@@ -90,6 +95,9 @@ def DUP(stack):
     end = POP(stack)
     PUSH(end, stack)
     PUSH(end, stack)
+
+def RANDOM(stack):
+    pass
 
 def PRINT(stack):
     print(POP(stack), end="")

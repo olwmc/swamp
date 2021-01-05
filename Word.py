@@ -171,16 +171,6 @@ class String_Print(Word):
 
 ###############################
 
-class Input(Word):
-    def __init__(self):
-      super().__init__()
-
-    def execute(self, stack, env):
-      inp = int(input(""))
-      PUSH(inp, stack)
-
-###############################
-
 class Conditional_Statement(Word):
 
   def __init__(self, if_body, else_body):

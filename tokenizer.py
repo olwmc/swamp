@@ -27,6 +27,9 @@ def get_token_type(string):
             "and"       : "OP",                 "or"        : "OP",
             "invert"    : "OP",                 "mod"       : "OP",
 
+            # Numeric input
+            "input"       : "OP",
+
             # Conditional
             "if"        : "IF",                 "then"      : "THEN",
             "else"      : "ELSE",
@@ -42,9 +45,6 @@ def get_token_type(string):
 
             # Function declaration
             ":"         : "DEF_START",          ";"         : "DEF_END",
-
-            # Numeric input
-            "input"       : "INPUT",
             
             # String output
             ".\""       : "QUOTE",

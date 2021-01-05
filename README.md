@@ -33,8 +33,8 @@ Output:
 - [X] begin-until loop
 - [ ] RNG
 - [ ] Unimplemented operations
-- [ ] Turn input into an op instead of word subclass
-- [ ] Debug mode
+- [X] Turn input into an op instead of word subclass
+- [ ] Debug mode / dump option
 - [ ] Error checking
 
 ### Resources/References

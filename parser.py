@@ -24,10 +24,6 @@ def make_words(tokens):
     # Singular operational word
     elif token.token_type == "OP":
       words.append(Operation(get_op_function(token.value)))
-
-    # Get input
-    elif token.token_type == "INPUT":
-      words.append(Input())
       
     # Variable declaration
     elif token.token_type == "VAR_DECLARATION":
@@ -149,7 +145,7 @@ def get_op_function(value):
       ">"         : "OP",                   "<"         : "OP",
       "and"       : "OP",                   "or"        : OR,
       "invert"    : INVERT,                 "mod"       : MOD,
-      "exit"      : EXIT
+      "exit"      : EXIT,                   "input"     : INPUT
   }.get(value)
 
 
