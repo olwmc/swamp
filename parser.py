@@ -5,7 +5,7 @@ from tokenizer import *
 class Import_Statement(Word):
   def __init__(self, file_name):
     super().__init__()
-    self.file_name = file_name + ".fs"
+    self.file_name = file_name + ".forth"
 
   def execute(self, stack, env):
     run_program_from_file(self.file_name, stack, env)

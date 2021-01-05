@@ -14,7 +14,7 @@ def get_x_y(stack):
 
 # INPUT
 def INPUT(stack):
-    inp = int(input(""))
+    inp = int(input())
     PUSH(inp, stack)
 
 # OPERATIONS
