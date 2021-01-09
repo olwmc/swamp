@@ -37,6 +37,7 @@ Output:
 - [ ] Unimplemented operations
 - [ ] Debug mode / dump option
 - [ ] Error checking
+- [ ] Language guide
 
 ### Resources/References
 The *wonderful* [EasyForth](https://skilldrick.github.io/easyforth/) by Skilldrick
