@@ -5,7 +5,7 @@ from tokenizer import *
 class Import_Statement(Word):
   def __init__(self, file_name):
     super().__init__()
-    self.file_name = file_name + ".forth"
+    self.file_name = file_name
 
   def execute(self, stack, env):
     run_program_from_file(self.file_name, stack, env)
@@ -146,7 +146,7 @@ def get_op_function(value):
       "and"       : "OP",                   "or"        : OR,
       "invert"    : INVERT,                 "mod"       : MOD,
       "exit"      : EXIT,                   "input"     : INPUT,
-      "random"    : RNDM
+      "random"    : RNDM,                   "save"      : SAVE_LOG
   }.get(value)
 
 

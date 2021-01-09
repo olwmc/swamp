@@ -10,5 +10,5 @@ if len(sys.argv) > 1:
 
 else:
     while(True):
-        inp = input("🐊 > ")
+        inp = input("[🐊]> ")
         run_program(inp, stack, env)

@@ -53,6 +53,9 @@ def get_token_type(string):
             # Import statement
             "import"    : "IMPORT",
             
+            # Save results
+            "save"      : "OP",
+
             # Exit
             "exit"      : "OP"
     }

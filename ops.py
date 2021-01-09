@@ -1,4 +1,6 @@
 import random
+import uuid
+
 # HELPER FUNCTIONS
 def not_none(x_y):
     if x_y[0] != None and x_y[1] != None:
@@ -17,6 +19,25 @@ def get_x_y(stack):
 def INPUT(stack):
     inp = int(input())
     PUSH(inp, stack)
+
+# SAVE
+def SAVE_LOG(stack):
+    # Output string
+    outstr = ""
+    
+    # File name is the current date&time
+    file_name = str(uuid.uuid4())[:8]
+
+    # Build output string
+    for element in stack:
+        outstr += str(element) + "\n"
+
+    # Write output string
+    with open(file_name + ".swampshot", "w") as f:
+        f.write(outstr)
+
+    # Print message
+    print("Log saved")
 
 # RNG
 def RNDM(stack):

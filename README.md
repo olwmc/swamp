@@ -33,6 +33,7 @@ Output:
 - [X] begin-until loop
 - [X] RNG
 - [X] Turn input into an op instead of word subclass
+- [X] Stack snapshot log `save`
 - [ ] Unimplemented operations
 - [ ] Debug mode / dump option
 - [ ] Error checking
