@@ -123,8 +123,18 @@ def DUP(stack):
     PUSH(end, stack)
     PUSH(end, stack)
 
-def RANDOM(stack):
-    pass
+def ROT(stack):
+    n3 = POP(stack)
+    n2 = POP(stack)
+    n1 = POP(stack)
+
+    PUSH(n2, stack)
+    PUSH(n3, stack)
+    PUSH(n1, stack)
+
+def CLEAR(stack):
+    while stack:
+        POP(stack)
 
 def PRINT(stack):
     print(POP(stack), end="")

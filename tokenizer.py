@@ -53,6 +53,8 @@ def get_token_type(string):
             # Import statement
             "import"    : "IMPORT",
             
+            # Clear stack
+            "clear"     : "OP",
             # Save results
             "save"      : "OP",
 

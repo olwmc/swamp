@@ -139,14 +139,15 @@ def get_op_function(value):
       "/"         : DIV,                    "*"         : MULT,
       "dup"       : DUP,                    "drop"      : POP,
       "swap"      : SWAP,                   "over"      : "OP",
-      "rot"       : "OP",                   "?"         : LIST,
+      "rot"       : ROT,                    "?"         : LIST,
       "emit"      : "OP",                   "cr"        : RETURN,
       "="         : EQUALS,                 "."         : PRINT, 
       ">"         : "OP",                   "<"         : "OP",
       "and"       : "OP",                   "or"        : OR,
       "invert"    : INVERT,                 "mod"       : MOD,
       "exit"      : EXIT,                   "input"     : INPUT,
-      "random"    : RNDM,                   "save"      : SAVE_LOG
+      "random"    : RNDM,                   "save"      : SAVE_LOG,
+      "clear"     : CLEAR
   }.get(value)
 
 
