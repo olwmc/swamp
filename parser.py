@@ -95,7 +95,7 @@ def make_words(tokens):
       last = tokens.pop(0).value[:-1]
 
       # TODO: FIX THIS
-      if len(last) == 0:
+      if last == "\"":
         string += " "
       else:
         string += last 
