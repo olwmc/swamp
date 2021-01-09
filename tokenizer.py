@@ -26,6 +26,7 @@ def get_token_type(string):
             ">"         : "OP",                 "<"         : "OP",
             "and"       : "OP",                 "or"        : "OP",
             "invert"    : "OP",                 "mod"       : "OP",
+            "random"    : "OP",
 
             # Numeric input
             "input"       : "OP",

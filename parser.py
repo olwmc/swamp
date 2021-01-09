@@ -145,7 +145,8 @@ def get_op_function(value):
       ">"         : "OP",                   "<"         : "OP",
       "and"       : "OP",                   "or"        : OR,
       "invert"    : INVERT,                 "mod"       : MOD,
-      "exit"      : EXIT,                   "input"     : INPUT
+      "exit"      : EXIT,                   "input"     : INPUT,
+      "random"    : RNDM
   }.get(value)
 
 

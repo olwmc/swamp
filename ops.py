@@ -1,3 +1,4 @@
+import random
 # HELPER FUNCTIONS
 def not_none(x_y):
     if x_y[0] != None and x_y[1] != None:
@@ -16,6 +17,11 @@ def get_x_y(stack):
 def INPUT(stack):
     inp = int(input())
     PUSH(inp, stack)
+
+# RNG
+def RNDM(stack):
+    num = POP(stack)
+    PUSH(random.randint(0,num), stack)
 
 # OPERATIONS
 def ADD(stack):
