@@ -26,18 +26,18 @@ def SAVE_LOG(stack):
     outstr = ""
     
     # File name is the current date&time
-    file_name = str(uuid.uuid4())[:8]
+    file_name = str(uuid.uuid4())[:8] + ".swampshot"
 
     # Build output string
     for element in stack:
         outstr += str(element) + "\n"
 
     # Write output string
-    with open(file_name + ".swampshot", "w") as f:
+    with open(file_name, "w") as f:
         f.write(outstr)
 
     # Print message
-    print("Log saved")
+    print("Log saved: " + file_name)
 
 # RNG
 def RNDM(stack):
@@ -137,7 +137,10 @@ def CLEAR(stack):
         POP(stack)
 
 def PRINT(stack):
-    print(POP(stack), end="")
+    num = POP(stack)
+
+    if num != None:
+        print(num, end="")
 
 def LIST(stack):
     print(stack)
