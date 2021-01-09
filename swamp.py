@@ -5,7 +5,15 @@ from parser import *
 stack = []
 env = make_env()
 
-if len(sys.argv) > 1:
+# Check if execute
+if len(sys.argv) > 1 and sys.argv[1] == "-e":
+    try:
+        run_program(sys.argv[2], stack, env)
+
+    except:
+        print("Invalid program")
+
+elif len(sys.argv) > 1:
     run_program_from_file(sys.argv[1], stack, env)
 
 else:

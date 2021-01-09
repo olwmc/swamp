@@ -132,6 +132,19 @@ def ROT(stack):
     PUSH(n3, stack)
     PUSH(n1, stack)
 
+def OVER(stack):
+    # n1 n2 -- n1 n2 n1
+    n2 = POP(stack)
+    n1 = POP(stack)
+
+    PUSH(n1, stack)
+    PUSH(n2, stack)
+    PUSH(n1, stack)
+
+def EMIT(stack):
+    n = POP(stack)
+    print(chr(n), end="")
+
 def CLEAR(stack):
     while stack:
         POP(stack)
