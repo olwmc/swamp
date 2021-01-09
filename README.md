@@ -31,9 +31,9 @@ Output:
 - [X] User input
 - [X] Method descriptors / Comments *(n -- n)*
 - [X] begin-until loop
-- [ ] RNG
-- [ ] Unimplemented operations
+- [X] RNG
 - [X] Turn input into an op instead of word subclass
+- [ ] Unimplemented operations
 - [ ] Debug mode / dump option
 - [ ] Error checking
 
