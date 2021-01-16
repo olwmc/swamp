@@ -35,6 +35,7 @@ Output:
 - [X] Turn input into an op instead of word subclass
 - [X] Stack snapshot log `save`
 - [ ] Unimplemented operations
+- [ ] Correct and descriptive error messages
 - [ ] Debug mode / dump option
 - [ ] Error checking
 - [ ] Language guide

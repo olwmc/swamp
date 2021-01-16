@@ -91,6 +91,10 @@ def make_words(tokens):
         string += tokens[0].value + " "
         tokens.pop(0)
 
+        if(len(tokens) == 0):
+          print("Error: Reached EOF before end of string")
+          exit()
+
       # Get last word w/o \"
       last = tokens.pop(0).value[:-1]
 
@@ -155,11 +159,19 @@ def make_body(words, end):
   """Make body of a compound word"""
   body = []
 
+  if(len(words) == 0):
+      print("Error: Reached end of sequence while searching for token \"" + end + "\"") 
+      exit()
+
   while(True):
     current_word = words.pop(0)
     
     if(current_word.token_type == end):
       break
+
+    if(len(words) == 0):
+      print("Error: Reached end of sequence while searching for token \"" + end + "\"") 
+      exit()
     
     body.append(current_word)
   
