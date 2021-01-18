@@ -146,7 +146,7 @@ def get_op_function(value):
       "rot"       : ROT,                    "?"         : LIST,
       "emit"      : EMIT,                   "cr"        : RETURN,
       "="         : EQUALS,                 "."         : PRINT, 
-      "and"       : "OP",                   "or"        : OR,
+      "and"       : AND,                   "or"        : OR,
       "invert"    : INVERT,                 "mod"       : MOD,
       "exit"      : EXIT,                   "input"     : INPUT,
       "random"    : RNDM,                   "save"      : SAVE_LOG,
