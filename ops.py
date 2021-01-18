@@ -109,6 +109,15 @@ def OR(stack):
     else:
         PUSH(0, stack)
 
+def AND(stack):
+    x_y = get_x_y(stack)
+
+    if x_y[0] == -1 and x_y[1] == -1:
+        PUSH(-1, stack)
+
+    else:
+        PUSH(0, stack)
+
 def INVERT(stack):
     top = POP(stack)
 
