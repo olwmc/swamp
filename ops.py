@@ -121,7 +121,7 @@ def AND(stack):
 def GREATER_THAN(stack):
     x_y = get_x_y(stack)
 
-    if x_y[0] > -1:
+    if x_y[0] > x_y[1]:
         PUSH(-1, stack)
 
     else:
@@ -130,7 +130,7 @@ def GREATER_THAN(stack):
 def LESS_THAN(stack):
     x_y = get_x_y(stack)
 
-    if x_y[0] < -1:
+    if x_y[0] < x_y[1]:
         PUSH(-1, stack)
 
     else:
