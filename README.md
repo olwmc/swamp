@@ -34,7 +34,7 @@ Output:
 - [X] RNG
 - [X] Turn input into an op instead of word subclass
 - [X] Stack snapshot log `save`
-- [ ] Unimplemented operations
+- [X] Unimplemented operations
 - [ ] Correct and descriptive error messages
 - [ ] Debug mode / dump option
 - [ ] Error checking
