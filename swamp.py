@@ -6,6 +6,9 @@ stack = []
 env = make_env()
 
 
+# TODO: Fix this whole hacky situation later. This works for now
+# but is totally unacceptable.
+
 # Check if evaluate
 if "-e" in sys.argv:
     try:
