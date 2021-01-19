@@ -5,7 +5,6 @@ from parser import *
 stack = []
 env = make_env()
 
-
 # TODO: Fix this whole hacky situation later. This works for now
 # but is totally unacceptable.
 
@@ -13,7 +12,6 @@ env = make_env()
 if "-e" in sys.argv:
     try:
         run_program(sys.argv[-1], stack, env)
-
     except:
         print("Invalid program")
 
