@@ -1,5 +1,5 @@
 # Swamp
-A FORTH-type language.
+A FORTH-like language.
 
 ## Example:
 ```forth
