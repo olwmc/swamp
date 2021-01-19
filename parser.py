@@ -1,7 +1,7 @@
 from Word import *
 from tokenizer import *
 
-# Import_statement class is here to avoid circular imports
+# Import statement class
 class Import_Statement(Word):
   def __init__(self, file_name):
     super().__init__()
