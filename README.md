@@ -1,5 +1,5 @@
 # Swamp
-A FORTH-type language.
+A FORTH-like language.
 
 ## Example:
 ```forth
@@ -38,6 +38,7 @@ Output:
 - [ ] Refactor program structure for clarity
 - [ ] Correct and descriptive error messages
 - [ ] Debug mode / dump option
+- [ ] Nested conditionals
 - [ ] Error checking
 - [ ] Language guide
 
