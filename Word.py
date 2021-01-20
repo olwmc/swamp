@@ -126,6 +126,10 @@ class Do_Loop(Word):
     # Get top two values on stack
     x_y = get_x_y(stack)
     
+    if x_y[0] == None or x_y[1] == None:
+      print("Do loop requires a min and max")
+      return
+
     # Get start and end of the loop
     start = x_y[1]
     end = x_y[0]
