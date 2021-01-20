@@ -16,11 +16,11 @@ def get_token_type(string, types):
     # Get the token type from the dictionary
     token_type = types.get(string)
 
-    # If there's nothing, it's either an int literal or an identifier
+    # If there's nothing, it's either an num literal or an identifier
     if token_type == None:
         try:
-            int(string)
-            return "INT_LITERAL"
+            float(string)
+            return "NUM_LITERAL"
         except:
             return "IDENTIFIER"
     
