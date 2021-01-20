@@ -18,7 +18,7 @@ if "-e" in sys.argv:
 # Else REPL
 elif len(sys.argv) == 1:
     while(True):
-        inp = input('\033[34m[🐊]\033[0m\033[31m>\033[0m ')
+        inp = input('\033[34m[🐊]\033[0m\033[31m:\033[0m ')
         run_program(inp, stack, env)
 
 # Else run from file
