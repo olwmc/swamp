@@ -11,13 +11,13 @@ class Word(object):
     pass
 ###############################
 
-class Int_Literal(Word):
+class Num_Literal(Word):
   def __init__(self, value):
     super().__init__()
     self.value = value
   
   def execute(self, stack, env):
-    stack.append(self.value)
+    PUSH(self.value, stack)
 
 ###############################
 
