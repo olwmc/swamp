@@ -17,9 +17,9 @@ def make_words(tokens):
   while(tokens):
     token = tokens.pop(0)
     
-    # Integer literal token
-    if token.token_type == "INT_LITERAL":
-      words.append(Int_Literal(int(token.value)))
+    # Number literal token
+    if token.token_type == "NUM_LITERAL":
+      words.append(Num_Literal(float(token.value)))
       
     # Singular operational word
     elif token.token_type == "OP":
