@@ -5,12 +5,9 @@ from parser import *
 stack = []
 env = make_env()
 
-<<<<<<< HEAD
-=======
 # TODO: Fix this whole hacky situation later. This works for now
 # but is totally unacceptable.
 
->>>>>>> 608b7882815de27a3211c7e81d4291997bcef486
 # Check if evaluate
 if "-e" in sys.argv:
     try:
