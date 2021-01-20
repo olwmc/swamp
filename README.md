@@ -38,6 +38,7 @@ Output:
 - [X] Float support
 - [ ] Refactor program structure for clarity
 - [ ] Correct and descriptive error messages
+    - [ ] Properly check for None/None on binops
 - [ ] Debug mode / dump option
 - [ ] Nested conditionals
 - [ ] Error checking
