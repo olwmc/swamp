@@ -17,7 +17,7 @@ def get_x_y(stack):
 
 # INPUT
 def INPUT(stack):
-    inp = int(input())
+    inp = float(input())
     PUSH(inp, stack)
 
 # SAVE
@@ -67,7 +67,7 @@ def DIV(stack):
     x_y = get_x_y(stack)
     
     if(not_none(x_y)):
-        PUSH(int(x_y[0] / x_y[1]), stack)
+        PUSH(x_y[0] / x_y[1], stack)
 
 def MOD(stack):
     x_y = get_x_y(stack)
@@ -76,7 +76,11 @@ def MOD(stack):
         PUSH(x_y[0] % x_y[1], stack)
 
 def PUSH(num, stack):
-    stack.append(num)
+    if num % 1 == 0:
+        stack.append(int(num))
+    
+    else:
+        stack.append(num)
 
 def POP(stack):
     try:
