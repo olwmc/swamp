@@ -59,7 +59,12 @@ class Store_Memory(Word):
   def execute(self, stack, env):
     location = POP(stack)
     value = POP(stack)
-    env["VARIABLES"]["vars"][location] = value
+
+    if location != None and value != None:
+      env["VARIABLES"]["vars"][location] = value
+    else:
+      print("Memory store requires a location and a value." +
+            "Got: LOC[" + str(location) + "] and VAL[" + str(value) + "]")
 
 
 ###############################
@@ -70,8 +75,13 @@ class Fetch_Memory(Word):
 
   def execute(self, stack, env):
     location = POP(stack)
-    value = env["VARIABLES"]["vars"][location]
-    PUSH(value, stack)
+
+    if location != None:
+      value = env["VARIABLES"]["vars"][location]
+      PUSH(value, stack)
+    
+    else:
+      print("Memory fetch requires a location. Got: None")
 
 ###############################
 
