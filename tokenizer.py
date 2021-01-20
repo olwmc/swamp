@@ -11,58 +11,8 @@ class Token(object):
         return str(self.token_type) + "  |  " + str(self.value)
 
 
-def get_token_type(string):
+def get_token_type(string, types):
     """Match the token with it's type"""
-    types = {
-
-            # Operations
-            "+"         : "OP",                 "-"         : "OP",
-            "/"         : "OP",                 "*"         : "OP",
-            "dup"       : "OP",                 "drop"      : "OP",
-            "swap"      : "OP",                 "over"      : "OP",
-            "rot"       : "OP",                 "?"         : "OP",
-            "emit"      : "OP",                 "cr"        : "OP",
-            "="         : "OP",                 "."         : "OP", 
-            ">"         : "OP",                 "<"         : "OP",
-            "and"       : "OP",                 "or"        : "OP",
-            "invert"    : "OP",                 "mod"       : "OP",
-            "random"    : "OP",
-
-            # Numeric input
-            "input"       : "OP",
-
-            # Conditional
-            "if"        : "IF",                 "then"      : "THEN",
-            "else"      : "ELSE",
-            
-            # Loops
-            "do"        : "DO",                 "loop"      : "LOOP",
-            "begin"     : "BEGIN",              "until"     : "UNTIL",
-
-            # Variables and memory
-            "variable"  : "VAR_DECLARATION",    "constant"  : "CONST_DECLARATION",
-            "cells"     : "CELLS",              "alloc"     : "ALLOC",
-            "!"         : "STORE_MEMORY",       "@"         : "FETCH_MEMORY",
-
-            # Function declaration
-            ":"         : "DEF_START",          ";"         : "DEF_END",
-            
-            # String output
-            ".\""       : "QUOTE",
-            
-            # Import statement
-            "import"    : "IMPORT",
-            
-            # Clear stack
-            "clear"     : "OP",
-            
-            # Save results
-            "save"      : "OP",
-
-            # Exit
-            "exit"      : "OP"
-    }
-
     # Get the token type from the dictionary
     token_type = types.get(string)
 
@@ -101,5 +51,55 @@ def tokenize(program):
         
         # Otherwhise just make the token
         if not inComment:
-            tokens.append(Token(get_token_type(string), string))  
+            tokens.append(Token(get_token_type(string, types), string))  
     return tokens
+
+
+types = {
+       # Operations
+       "+"         : "OP",                 "-"         : "OP",
+       "/"         : "OP",                 "*"         : "OP",
+       "dup"       : "OP",                 "drop"      : "OP",
+       "swap"      : "OP",                 "over"      : "OP",
+       "rot"       : "OP",                 "?"         : "OP",
+       "emit"      : "OP",                 "cr"        : "OP",
+       "="         : "OP",                 "."         : "OP", 
+       ">"         : "OP",                 "<"         : "OP",
+       "and"       : "OP",                 "or"        : "OP",
+       "invert"    : "OP",                 "mod"       : "OP",
+       "random"    : "OP",
+
+       # Numeric input
+       "input"       : "OP",
+
+       # Conditional
+       "if"        : "IF",                 "then"      : "THEN",
+       "else"      : "ELSE",
+       
+       # Loops
+       "do"        : "DO",                 "loop"      : "LOOP",
+       "begin"     : "BEGIN",              "until"     : "UNTIL",
+
+       # Variables and memory
+       "variable"  : "VAR_DECLARATION",    "constant"  : "CONST_DECLARATION",
+       "cells"     : "CELLS",              "alloc"     : "ALLOC",
+       "!"         : "STORE_MEMORY",       "@"         : "FETCH_MEMORY",
+
+       # Function declaration
+       ":"         : "DEF_START",          ";"         : "DEF_END",
+       
+       # String output
+       ".\""       : "QUOTE",
+       
+       # Import statement
+       "import"    : "IMPORT",
+       
+       # Clear stack
+       "clear"     : "OP",
+       
+       # Save results
+       "save"      : "OP",
+
+       # Exit
+       "exit"      : "OP"
+}
