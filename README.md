@@ -35,6 +35,7 @@ Output:
 - [X] Turn input into an op instead of word subclass
 - [X] Stack snapshot log `save`
 - [X] Unimplemented operations
+- [X] Float support
 - [ ] Refactor program structure for clarity
 - [ ] Correct and descriptive error messages
 - [ ] Debug mode / dump option
