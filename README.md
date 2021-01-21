@@ -14,8 +14,8 @@ A FORTH-like language.
 
 10 foo
 
-( Print stack)
-?
+( Print stack with label)
+." Stack: " ?
 ```
 Output:
 ```python
