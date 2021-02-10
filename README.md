@@ -36,6 +36,7 @@ Stack: [10,9,8,7,6,5,4,3,2,1]
 - [X] Stack snapshot log `save`
 - [X] Unimplemented operations
 - [X] Float support
+- [ ] Character input support
 - [ ] Refactor program structure for clarity
 - [ ] Correct and descriptive error messages
     - [ ] Properly check for None/None on binops
